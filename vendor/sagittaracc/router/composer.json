@@ -1,0 +1,14 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Sagittaracc\\Router\\": "src/",
+            "Sagittaracc\\Router\\tests\\": "tests/"
+        }
+    },
+    "require": {
+        "sagittaracc/php-python-decorator": "^1.12"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    }
+}

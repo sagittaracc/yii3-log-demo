@@ -1,0 +1,73 @@
+{
+    "name": "yiisoft/log",
+    "type": "library",
+    "description": "Yii Logging Library",
+    "keywords": [
+        "yii",
+        "framework",
+        "log",
+        "logger",
+        "psr-3"
+    ],
+    "homepage": "https://www.yiiframework.com/",
+    "license": "BSD-3-Clause",
+    "support": {
+        "source": "https://github.com/yiisoft/log",
+        "issues": "https://github.com/yiisoft/log/issues",
+        "forum": "https://www.yiiframework.com/forum/",
+        "wiki": "https://www.yiiframework.com/wiki/",
+        "irc": "irc://irc.freenode.net/yii",
+        "chat": "https://t.me/yii3en"
+    },
+    "require": {
+        "php": "^8.0",
+        "psr/log": "^2.0|^3.0",
+        "yiisoft/var-dumper": "^1.0"
+    },
+    "require-dev": {
+        "ext-json": "*",
+        "phpunit/phpunit": "^9.5",
+        "roave/infection-static-analysis-plugin": "^1.18",
+        "spatie/phpunit-watcher": "^1.23",
+        "vimeo/psalm": "^4.22"
+    },
+    "provide": {
+        "psr/log-implementation": "1.0.0"
+    },
+    "suggest": {
+        "yiisoft/log-target-db": "Allows writing log messages to the database",
+        "yiisoft/log-target-email": "Allows sending log messages by email",
+        "yiisoft/log-target-file": "Allows writing log messages to the files",
+        "yiisoft/log-target-syslog": "Allows writing log messages to the Syslog"
+    },
+    "autoload": {
+        "psr-4": {
+            "Yiisoft\\Log\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Yiisoft\\Log\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "config-plugin-options": {
+            "source-directory": "config"
+        },
+        "config-plugin": {
+            "events-console": "events-console.php",
+            "events-web": "events-web.php"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "infection/extension-installer": true,
+            "composer/package-versions-deprecated": true
+        }
+    },
+    "scripts": {
+        "test": "phpunit --testdox --no-interaction",
+        "test-watch": "phpunit-watcher watch"
+    }
+}

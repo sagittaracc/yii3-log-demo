@@ -1,0 +1,22 @@
+{
+    "name": "arutyunyan/my-app",
+    "autoload": {
+        "psr-4": {
+            "Arutyunyan\\MyApp\\": "src/",
+            "Arutyunyan\\MyApp\\Config\\": "config/",
+            "Arutyunyan\\MyApp\\Controllers\\": "controllers/"
+        }
+    },
+    "authors": [
+        {
+            "name": "arutyunyan",
+            "email": "arutyunyan@bolid.ru"
+        }
+    ],
+    "require": {
+        "sagittaracc/router": "^1.0",
+        "sagittaracc/di": "^1.0",
+        "yiisoft/log": "^2.0",
+        "yiisoft/log-target-file": "^3.0"
+    }
+}
