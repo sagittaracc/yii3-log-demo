@@ -16,14 +16,8 @@ final class ControllerTest extends TestCase
             ->method('info')
             ->with('Login: {user}', ['user' => 'test']);
 
-        $controller = new class($logger) extends Controller {
-            public App $_app;
-
-            function __construct(LoggerInterface $logger)
-            {
-                $this->_app = new App($logger);
-            }
-        };
+        $controller = new Controller;
+        $controller->logger = $logger;
 
         // Вызов метода напрямую
         $controller->login('test');

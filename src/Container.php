@@ -13,9 +13,6 @@ trait Container
 {
     use Decorator;
 
-    #[Di(App::class)]
-    public App $app;
-
     #[Di(Logger::class, [new FileTarget(Config::LOG_FILE)])]
     public LoggerInterface $logger;
 }

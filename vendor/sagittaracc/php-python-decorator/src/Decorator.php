@@ -54,7 +54,7 @@ trait Decorator
     public function __get($name)
     {
         $name = ltrim($name, '_');
-
+/*
         $class = new ReflectionClass($this);
         $prop = $class->getProperty($name);
         $attributes = $prop->getAttributes();
@@ -69,7 +69,7 @@ trait Decorator
 
             $this->$name = $instance;
         }
-
+*/
         return $this->$name;
     }
 }

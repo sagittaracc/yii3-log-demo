@@ -12,6 +12,6 @@ class Controller
     #[Route('/login/(\w+)')]
     function login(string $user)
     {
-        $this->_app->logger->info('Login: {user}', ['user' => $user]);
+        $this->_logger->info('Login: {user}', ['user' => $user]);
     }
 }
