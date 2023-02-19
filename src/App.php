@@ -3,7 +3,7 @@
 namespace Arutyunyan\MyApp;
 
 use Psr\Log\LoggerInterface;
-use Yiisoft\Log\Target\File\FileTarget;
+use Yiisoft\Log\Target;
 
 class App
 {
@@ -11,9 +11,9 @@ class App
 
     function __construct(
         private LoggerInterface $logger,
-        private FileTarget $fileTarger,
+        private Target $targer,
     )
     {
-        $this->log = new $logger([$fileTarger]);
+        $this->log = new $logger([$targer]);
     }
 }

@@ -7,6 +7,7 @@ use Psr\Log\LoggerInterface;
 use Sagittaracc\Di\Di;
 use Sagittaracc\PhpPythonDecorator\Decorator;
 use Yiisoft\Log\Logger;
+use Yiisoft\Log\Target;
 use Yiisoft\Log\Target\File\FileTarget;
 
 trait Container
@@ -14,11 +15,11 @@ trait Container
     use Decorator;
 
     #[Di(App::class)]
-    private App $app;
+    public App $app;
 
     #[Di(Logger::class)]
-    private LoggerInterface $logger;
+    public LoggerInterface $logger;
 
     #[Di(FileTarget::class, [Config::LOG_FILE])]
-    private FileTarget $fileTarger;
+    public Target $fileTarger;
 }

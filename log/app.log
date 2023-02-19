@@ -1,9 +1,9 @@
-2023-02-17 08:08:50.818300 [info][application] Login: yuriy
+2023-02-19 13:32:49.654300 [info][application] Login: me
 
 Message context:
 
-user: 'yuriy'
-time: 1676621330.818261
-memory: 630128
+user: 'me'
+time: 1676813569.654292
+memory: 1331440
 category: 'application'
 
