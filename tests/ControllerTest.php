@@ -2,13 +2,25 @@
 
 use Arutyunyan\MyApp\Tests\TestAssets\StubController;
 use PHPUnit\Framework\TestCase;
+use Psr\Log\LoggerInterface;
 use Sagittaracc\Router\Route;
 
 final class ControllerTest extends TestCase
 {
     public function testController(): void
     {
-        (new Route('/login/test'))->runIn(StubController::class);
-        // Check'нуть DummyTarget ...
+        $logger = $this->createMock(LoggerInterface::class);
+        $logger
+            ->expects($this->exactly(2))
+            ->method('info')
+            ->with('Login: {user}', ['user' => 'test']);
+
+        $controller = new StubController($logger);
+
+        // Вызов метода напрямую
+        $controller->login('test');
+
+        // Вызов через атрибут метода
+        (new Route('/login/test'))->runIn($controller);
     }
 }

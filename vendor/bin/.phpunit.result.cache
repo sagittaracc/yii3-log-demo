@@ -1,1 +1,1 @@
-{"version":1,"defects":{"ControllerTest::testController":5},"times":{"ControllerTest::testController":0.014}}
+{"version":1,"defects":{"ControllerTest::testController":8},"times":{"ControllerTest::testController":0.06}}
